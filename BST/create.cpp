@@ -93,7 +93,7 @@ void getMin(Node* root,int &mini){
         return;
     }
     if(root->left!=NULL){
-        mini=root->left->data;
+        mini=root->data;
         getMin(root->left,mini);
     }
 }
@@ -103,7 +103,7 @@ void getMax(Node* root,int &maxi){
         return;
     }
     if(root->right!=NULL){
-        maxi=root->right->data;
+        maxi=root->data;
         getMax(root->right,maxi);
     }
 }
