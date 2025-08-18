@@ -23,7 +23,7 @@ void insertTrie(TrieNode* root,string word){
      child=root->children[ch-'a'];
    }
    else{
-     child=new TrieNode(ch);
+     child=new TrieNode(ch); 
      root->children[ch-'a']=child;
    }
    insertTrie(child,word.substr(1));

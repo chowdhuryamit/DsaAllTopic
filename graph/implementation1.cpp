@@ -57,10 +57,14 @@ class Graph{
         }
     }
 
-    void dfsTraversal(){
+    void dfsTraversal(int n){
         map<int,bool>visited;
-        int src=0;
-        dfsHelper(src,visited);
+        //int src=0;
+        for(int i=0;i<n;i++){//this loop take care of disconnected components
+            if(!visited[i]){
+              dfsHelper(i,visited);
+            }
+        }
     }
 };
 int main(){
@@ -83,6 +87,6 @@ int main(){
     g.addEdge(3,5,4,1);
 
    //g.bfsTraversal(0);
-   g.dfsTraversal();
+   g.dfsTraversal(7);
 
 }
