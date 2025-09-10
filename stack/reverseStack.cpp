@@ -16,8 +16,8 @@ void reverseStack(stack<int>&st){
     }
     int top=st.top();
     st.pop();
-    reverseStack(st);
     insertAtBottom(st,top);
+    //reverseStack(st);
 }
 int main(){
  stack<int>st;
@@ -26,7 +26,10 @@ int main(){
  st.push(30);
  st.push(40);
  st.push(50);
- reverseStack(st);
+ int size=st.size();
+ for(int i=0;i<size;i++){
+  reverseStack(st);
+ }
  while (!st.empty())
  {
     cout<<st.top()<<" ";
